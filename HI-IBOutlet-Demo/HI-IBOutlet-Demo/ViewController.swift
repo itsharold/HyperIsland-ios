@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //MARK: Constants
     
     private let colors: [UIColor] = [
+        UIColor.whiteColor(),
         UIColor.redColor(),
         UIColor.orangeColor(),
         UIColor.yellowColor(),
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     ]
     
     private let colorNames: [String] = [
+        "white",
         "Red",
         "Orange",
         "Yellow",
@@ -36,6 +38,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeButtonColor: UIButton!
     @IBOutlet weak var awesomeView: UIView!
+    @IBOutlet weak var label: UILabel!
+
     
     //MARK: Properties
     
@@ -48,8 +52,17 @@ class ViewController: UIViewController {
         
         awesomeView?.backgroundColor = colors[colorIndex]
         
+        label?.textColor = colors[colorIndex]
+        label?.text = colorNames[colorIndex]
+        
         //increase our stepper
         colorStepper++
+    }
+    
+    @IBAction func resetButton(sender: UIButton) {
+        awesomeView?.backgroundColor = colors[0]
+        label?.textColor = colors[0]
+        label?.text = colorNames[0]
     }
     
     @IBAction func randomChangeColor(sender: AnyObject?) {
