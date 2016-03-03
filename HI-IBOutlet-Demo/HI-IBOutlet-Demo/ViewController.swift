@@ -64,6 +64,23 @@ class ViewController: UIViewController {
         label?.textColor = colors[0]
         label?.text = colorNames[0]
     }
+    @IBOutlet weak var sliderRed: UISlider!
+    @IBOutlet weak var sliderGreen: UISlider!
+    @IBOutlet weak var sliderBlue: UISlider!
+    
+    @IBAction func sliderRed(sender: UISlider) {
+        self.view.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1.0)
+
+    }
+    
+    @IBAction func sliderGreen(sender: AnyObject) {
+        self.view.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1.0)
+    }
+    
+    @IBAction func sliderBlue(sender: UISlider) {
+        self.view.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1.0)
+    }
+    
     
     @IBAction func randomChangeColor(sender: AnyObject?) {
         let colorIndex = random() % colors.count
