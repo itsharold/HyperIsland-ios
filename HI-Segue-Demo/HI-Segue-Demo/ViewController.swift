@@ -25,6 +25,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "TextSegue" {
+            //Check if destination controller is of class we need
+            guard segue.destinationViewController is CustomizedViewController else {
+                return
+            }
+            
+            //We need to class cast our destinationVC to be able to change its values
+            let destinationVC = segue.destinationViewController as! CustomizedViewController
+            destinationVC.textInput = valueTextField.text
+            if(colorSegmentedControl.selectedSegmentIndex == 0)
+            {
+                destinationVC.textColor = UIColor.redColor()
+            }
+            if(colorSegmentedControl.selectedSegmentIndex == 1)
+            {
+                destinationVC.textColor = UIColor.greenColor()
+            }
+            if(colorSegmentedControl.selectedSegmentIndex == 2)
+            {
+                destinationVC.textColor = UIColor.blueColor()
+            }
+            destinationVC.shouldInputData = true
+        }
+    }
 
 }
 

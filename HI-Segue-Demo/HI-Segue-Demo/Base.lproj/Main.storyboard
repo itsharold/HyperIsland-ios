@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main VC-->
@@ -77,6 +78,9 @@
                                 <state key="normal" title="Show Custom">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cXD-Db-EWr" kind="push" identifier="TextSegue" id="u64-SR-WUU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -113,6 +117,43 @@
             </objects>
             <point key="canvasLocation" x="832" y="484"/>
         </scene>
+        <!--Custom-->
+        <scene sceneID="grH-cG-V9e">
+            <objects>
+                <viewController id="cXD-Db-EWr" customClass="CustomizedViewController" customModule="HI_Segue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5b-Xb-V9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="CcA-5o-8at"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KrA-RL-aBd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iL-NH-80k">
+                                <rect key="frame" x="139" y="152" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3iL-NH-80k" secondAttribute="height" multiplier="2:1" id="n5E-Ti-yDj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3iL-NH-80k" firstAttribute="centerX" secondItem="KrA-RL-aBd" secondAttribute="centerX" id="qrE-4w-kgp"/>
+                            <constraint firstItem="3iL-NH-80k" firstAttribute="top" secondItem="T5b-Xb-V9i" secondAttribute="bottom" constant="88" id="zlz-OD-aSr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom" id="tyV-WJ-KCI"/>
+                    <connections>
+                        <outlet property="labelOutput" destination="3iL-NH-80k" id="Bzo-Yh-SXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd2-Wr-JNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="1230"/>
+        </scene>
         <!--Tangerine-->
         <scene sceneID="jg3-as-swf">
             <objects>
@@ -126,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KER-u6-ugf">
-                                <rect key="frame" x="86.5" y="84" width="147" height="30"/>
+                                <rect key="frame" x="87" y="84" width="147" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rgi-GG-gWt"/>
                                 </constraints>
@@ -149,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AV-CG-XHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="-183"/>
+            <point key="canvasLocation" x="1338" y="-244"/>
         </scene>
         <!--Inversed Color-->
         <scene sceneID="VxT-b3-MRg">
@@ -168,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCz-BA-sKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="-183"/>
+            <point key="canvasLocation" x="1834" y="-244"/>
         </scene>
         <!--Maroon-->
         <scene sceneID="vF6-f2-pPd">
@@ -187,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TD-eM-seD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="484"/>
+            <point key="canvasLocation" x="1366" y="507"/>
         </scene>
         <!--Teal-->
         <scene sceneID="1pZ-tn-jYJ">
@@ -206,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHb-Pv-KWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="1165"/>
+            <point key="canvasLocation" x="1338" y="1235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZG-v9-2ZV">

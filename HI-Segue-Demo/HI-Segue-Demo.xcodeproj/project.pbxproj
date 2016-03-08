@@ -14,6 +14,7 @@
 		4562DED51C8CB06D00D68100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4562DED31C8CB06D00D68100 /* LaunchScreen.storyboard */; };
 		4562DEDD1C8CBD0B00D68100 /* HISimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4562DEDC1C8CBD0B00D68100 /* HISimpleViewController.swift */; };
 		4562DEDF1C8CC09100D68100 /* HIColoredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4562DEDE1C8CC09100D68100 /* HIColoredViewController.swift */; };
+		B45BFC541C8EF9C40092B16C /* CustomizedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BFC531C8EF9C40092B16C /* CustomizedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		4562DED41C8CB06D00D68100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4562DED61C8CB06D00D68100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4562DEDC1C8CBD0B00D68100 /* HISimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HISimpleViewController.swift; sourceTree = "<group>"; };
-		4562DEDE1C8CC09100D68100 /* HIColoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIColoredViewController.swift; path = "HI-Segue-Demo/HIColoredViewController.swift"; sourceTree = "<group>"; };
+		4562DEDE1C8CC09100D68100 /* HIColoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIColoredViewController.swift; sourceTree = "<group>"; };
+		B45BFC531C8EF9C40092B16C /* CustomizedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,6 @@
 		4562DEBE1C8CB06D00D68100 = {
 			isa = PBXGroup;
 			children = (
-				4562DEDE1C8CC09100D68100 /* HIColoredViewController.swift */,
 				4562DEC91C8CB06D00D68100 /* HI-Segue-Demo */,
 				4562DEC81C8CB06D00D68100 /* Products */,
 			);
@@ -59,13 +60,15 @@
 		4562DEC91C8CB06D00D68100 /* HI-Segue-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4562DEDE1C8CC09100D68100 /* HIColoredViewController.swift */,
+				4562DEDC1C8CBD0B00D68100 /* HISimpleViewController.swift */,
 				4562DECA1C8CB06D00D68100 /* AppDelegate.swift */,
 				4562DECC1C8CB06D00D68100 /* ViewController.swift */,
 				4562DECE1C8CB06D00D68100 /* Main.storyboard */,
 				4562DED11C8CB06D00D68100 /* Assets.xcassets */,
 				4562DED31C8CB06D00D68100 /* LaunchScreen.storyboard */,
 				4562DED61C8CB06D00D68100 /* Info.plist */,
-				4562DEDC1C8CBD0B00D68100 /* HISimpleViewController.swift */,
+				B45BFC531C8EF9C40092B16C /* CustomizedViewController.swift */,
 			);
 			path = "HI-Segue-Demo";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				4562DEDF1C8CC09100D68100 /* HIColoredViewController.swift in Sources */,
 				4562DEDD1C8CBD0B00D68100 /* HISimpleViewController.swift in Sources */,
+				B45BFC541C8EF9C40092B16C /* CustomizedViewController.swift in Sources */,
 				4562DECD1C8CB06D00D68100 /* ViewController.swift in Sources */,
 				4562DECB1C8CB06D00D68100 /* AppDelegate.swift in Sources */,
 			);
@@ -292,6 +296,7 @@
 				4562DEDB1C8CB06D00D68100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
